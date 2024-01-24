@@ -1,0 +1,17 @@
+<div>
+    <h2>Catalog</h2>
+    <input type="text" placeholder="Search products..." [(ngModel)]="searchTerm" (input)="searchProducts()">
+    <div *ngFor="let product of filteredProducts">
+      <h3>{{ product.name }}</h3>
+      <p>Price: ${{ product.price }}</p>
+      <button (click)="addToBasket(product.id)">Add to Basket</button>
+    </div>
+</div>
+<div>
+    <h2>Catalog</h2>
+    <div *ngFor="let product of products">
+      <h3>{{ product.name }}</h3>
+      <p>Price: ${{ product.price }}</p>
+      <button (click)="addToBasket(product.id)">Add to Basket</button>
+    </div>
+</div>
